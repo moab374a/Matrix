@@ -1,12 +1,6 @@
-public class main {
+public class Main {
+
     public static void main(String[] args) {
-
-        MyMatrix<Integer> matrix = new MyMatrix<>(1,2);
-        matrix.put(0,0, 1);
-
-        matrix.getColumnCount();
-        matrix.getRowCount();
-
-
+	// write your code here
     }
 }
