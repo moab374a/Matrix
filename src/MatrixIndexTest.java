@@ -1,6 +1,3 @@
-package test;
-import code.*;
-
 import org.junit.Before;
 import org.junit.Test;
 

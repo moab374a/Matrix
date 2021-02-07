@@ -1,5 +1,3 @@
-package code;
-
 import java.util.Objects;
 
 public class MatrixIndex {
@@ -7,6 +5,7 @@ public class MatrixIndex {
    private int column;
 
     public MatrixIndex(int row, int column) {
+        if (row <0 || column < 0) throw new IllegalArgumentException();
         this.row = row;
         this.column = column;
     }
@@ -16,6 +15,7 @@ public class MatrixIndex {
     }
 
     public int getRow() {
+
         return row;
     }
 

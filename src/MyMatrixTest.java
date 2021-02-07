@@ -1,5 +1,3 @@
-package test;
-import code.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -96,10 +94,12 @@ public class MyMatrixTest {
                 "MyMatrix.DepthFirstIterator", iter.getClass().getCanonicalName());
         String[] values = {a, a, c, d, b, c, b, a, d};
         for (int i = 0; i < values.length; i++) {
+
             assertTrue("DepthFirstIterator.hasNext() should return true if there is a next available element!",
                     iter.hasNext());
             assertEquals("DepthFirstIterator.next() should return the correct next element if there is one available!",
                     values[i], iter.next());
+
         }
         assertFalse("DepthFirstIterator.hasNext() should return false if there is no next element!", iter.hasNext());
         try {
