@@ -14,13 +14,20 @@ public class MyMatrix<T> implements Matrix<T> {
 
     //Inner class
     class DepthFirstIterator implements Iterator {
-        private int currentPos = -1;
+
+        private int currentIndex = 0;
+
+        //Size of The matrix
+        private int currentSize;
 
         private ArrayList<T> sort;
 
         public DepthFirstIterator() {
             sort = new ArrayList<>();
             addSort();
+
+            //CurrentSize == List Size (9)
+            this.currentSize = sort.size();
 
         }
 
@@ -45,31 +52,17 @@ public class MyMatrix<T> implements Matrix<T> {
 
         @Override
         public boolean hasNext() {
-
-            for (int i = 0; i < sort.size(); i++) {
-
-                if (currentPos == -1 && sort.get(0) != null) {
-                    return true;
-                }
-                else if (currentPos != -1) {
-                    return currentPos + 1 != 0;
-                }
-
-            }
-            return false;
+            return currentIndex < currentSize;
         }
 
         @Override
         public T next() {
-
-            if (currentPos == -1) {
-                currentPos = currentPos + 1;
+            if(currentIndex >= currentSize){
+                throw new NoSuchElementException();
             }
-            return sort.get(currentPos);
+           return sort.get(currentIndex++);
         }
-
     }
-
 
     @Override
     public int getRowCount() {
