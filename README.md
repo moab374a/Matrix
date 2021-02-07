@@ -1,3 +1,2 @@
 # Matrix
-Iterator Design Pattern 
-
+Iterator Design Pattern
