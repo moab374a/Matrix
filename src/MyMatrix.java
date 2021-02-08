@@ -60,7 +60,7 @@ public class MyMatrix<T> implements Matrix<T> {
             if(currentIndex >= currentSize){
                 throw new NoSuchElementException();
             }
-           return sort.get(currentIndex++);
+           return sort.get(currentIndex++); // call the function and then  add one to currentIndex
         }
     }
 
